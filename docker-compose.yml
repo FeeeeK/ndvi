@@ -1,0 +1,29 @@
+version: "3.7"
+
+services:
+  db:
+    image: kartoza/postgis:14-3.3
+    container_name: ${PROJECT_NAME}_db
+    restart: always
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    env_file:
+      - .env
+    expose:
+      - 5432
+  app:
+    build: .
+    container_name: ${PROJECT_NAME}
+    image: ${PROJECT_NAME}
+    restart: always
+    ports:
+      - "${PORT}:${PORT}"
+    volumes:
+      - ./alembic:/${PROJECT_NAME}/alembic
+    env_file:
+      - .env
+    depends_on:
+      - db
+
+volumes:
+  postgres_data: null

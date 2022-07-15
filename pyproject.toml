@@ -1,0 +1,38 @@
+[tool.poetry]
+name = "ndvi"
+version = "0.1.0"
+
+authors = ["FeeeeK <26704473+FeeeeK@users.noreply.github.com>"]
+description = "Test app for AEROSPACE-AGRO"
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.7.2"
+
+GeoAlchemy2 = "^0.12.1"
+SQLAlchemy = "^1.4.39"
+alembic = "^1.8.1"
+asyncpg = "^0.26.0"
+earthengine-api = "^0.1.317"
+fastapi = "^0.79.0"
+geojson-pydantic = "^0.4.2"
+loguru = "^0.6.0"
+python-dotenv = "^0.20.0"
+typing-extensions = "^4.3.0"
+uvicorn = "^0.18.2"
+
+[tool.poetry.dev-dependencies]
+black = "^22.6.0"
+flake8 = "^4.0.1"
+isort = "^5.10.1"
+mypy = "^0.961"
+
+[tool.black]
+line-length = 99
+
+[tool.isort]
+profile = "black"
+
+[build-system]
+build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core>=1.0.0"]
