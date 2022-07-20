@@ -1,5 +1,5 @@
 from geojson_pydantic import FeatureCollection
-from pydantic import BaseModel, root_validator
+from pydantic import root_validator
 
 from src.utils.exceptions import WrongGeometryError
 
@@ -16,21 +16,5 @@ class CreateFieldRequest(GeoJson):
     pass
 
 
-class DeleteFieldRequest(BaseModel):
-    field_id: int
-
-
-class FieldIdRequest(BaseModel):
-    field_id: int
-
-
 class FieldGeoJsonRequest(GeoJson):
-    pass
-
-
-class ImageRequest(BaseModel):
-    field_id: int
-
-
-class NDVIRequest(ImageRequest):
     pass

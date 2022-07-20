@@ -20,7 +20,7 @@ class MapProcessor:
         self,
         geometry: Polygon,
         date_from: Optional[datetime] = None,
-        date_to: Optional[datetime] = datetime.now(),
+        date_to: Optional[datetime] = None,
     ) -> str:
         if date_from is None:
             date_from = datetime.now() - timedelta(days=90)
