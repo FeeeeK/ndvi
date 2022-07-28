@@ -12,5 +12,5 @@ RUN poetry install --no-dev
 COPY src ./src
 
 COPY docker-entrypoint.sh ./
-ENTRYPOINT ["docker-entrypoint.sh"]
+ENTRYPOINT ["./docker-entrypoint.sh"]
 CMD [ "python", "-m", "src" ]
