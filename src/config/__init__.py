@@ -1,5 +1,5 @@
 from .config import (
-    GEE_CREDENTIALS_PATH,
+    GEE_CREDENTIALS_FILE,
     GEE_SERVICE_EMAIL,
     IP,
     LOG_LEVEL,
@@ -21,5 +21,5 @@ __all__ = [
     "POSTGRES_DB",
     "NDVI_PALETTE",
     "GEE_SERVICE_EMAIL",
-    "GEE_CREDENTIALS_PATH",
+    "GEE_CREDENTIALS_FILE",
 ]

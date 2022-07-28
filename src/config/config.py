@@ -30,7 +30,7 @@ NDVI_PALETTE = [
     "11270b",
 ]
 GEE_SERVICE_EMAIL = config("GEE_SERVICE_EMAIL", str)
-GEE_CREDENTIALS_PATH = config("GEE_CREDENTIALS_PATH", str)
+GEE_CREDENTIALS_FILE = config("GEE_CREDENTIALS_FILE", str)
 
 logger.remove()
 log_format = (

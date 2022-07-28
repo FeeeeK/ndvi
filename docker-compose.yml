@@ -20,6 +20,7 @@ services:
       - "${PORT}:${PORT}"
     volumes:
       - ./alembic:/${PROJECT_NAME}/alembic
+      - ./{GEE_CREDENTIALS_FILE}:/${PROJECT_NAME}/{GEE_CREDENTIALS_FILE}
     env_file:
       - .env
     depends_on:

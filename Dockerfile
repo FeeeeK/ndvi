@@ -8,7 +8,6 @@ RUN pip install poetry
 COPY pyproject.toml poetry.loc[k] ./
 RUN poetry install --no-dev
 COPY src ./src
-COPY credentials.json .
 
 COPY docker-entrypoint.sh .
 ENTRYPOINT ["/docker-entrypoint.sh"]

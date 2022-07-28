@@ -6,13 +6,13 @@ import ee  # type: ignore
 import httplib2  # type: ignore
 from geojson_pydantic import Polygon
 
-from src.config import GEE_CREDENTIALS_PATH, GEE_SERVICE_EMAIL, NDVI_PALETTE
+from src.config import GEE_CREDENTIALS_FILE, GEE_SERVICE_EMAIL, NDVI_PALETTE
 from src.utils import _async
 
 
 class MapProcessor:
     def __init__(self):
-        self.credentials = ee.ServiceAccountCredentials(GEE_SERVICE_EMAIL, GEE_CREDENTIALS_PATH)
+        self.credentials = ee.ServiceAccountCredentials(GEE_SERVICE_EMAIL, GEE_CREDENTIALS_FILE)
         ee.Initialize(self.credentials)
 
     @_async
