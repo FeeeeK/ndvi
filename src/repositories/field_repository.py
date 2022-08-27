@@ -59,6 +59,4 @@ class FieldRepository:
         query = delete(Field).where(Field.id == id).returning(Field.id, Field.geometry)
         async with SessionManager() as session:
             deleted = (await session.execute(query)).one_or_none()
-        if deleted:
-            return FieldResponse(id=id, geometry=deleted[1].data)
-        return None
+        return FieldResponse(id=id, geometry=deleted[1].data) if deleted else None
